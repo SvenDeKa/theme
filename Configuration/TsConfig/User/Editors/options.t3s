@@ -1,0 +1,10 @@
+options {
+    clearCache {
+        pages = 1
+    }
+    saveClipboard = 0
+    clipboardNumberPads = 2
+    uploadFieldsInTopOfEB = 1
+    HTMLAreaPspellMode = bad-spellers
+    enablePersonalDicts = 1
+}

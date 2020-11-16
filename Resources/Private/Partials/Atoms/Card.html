@@ -1,0 +1,48 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:comment>
+
+    VARIABLES
+    =========
+    class: additional cssClasses to modify card
+    bgImgURL:   url of image     string
+    raised:     bool // setting shadow like over in linked
+    innerContainer:  cssClass of innercontainer string
+    link: typolink-parameter
+    btnText: string - a button will be added to card-footer if linked
+</f:comment>
+<f:variable name="cssClasses" value="card{f:if(
+         condition:raised,
+         then:' card--raised'
+    )}{f:if(
+         condition:bgImgURL,
+         then:' card--background'
+    )}{f:if(
+        condition:class,
+        then:' {class}'
+)}"/>
+<f:variable name="bgImgStyle" value="{f:if(
+         condition: bgImgURL,
+         then:' style=background-image:url({bgImgURL})'
+)}"/>
+<f:if condition="{link}">
+    <f:then>
+        <a href="{f:uri.typolink(parameter: link)}"
+           class="{cssClasses} card--linked"{bgImgStyle}>
+            <f:render section="content" arguments="{_all}"/>
+        </a>
+    </f:then>
+    <f:else>
+        <div class="{cssClasses}"{bgImgStyle}>
+            <f:render section="content" arguments="{_all}"/>
+        </div>
+    </f:else>
+</f:if>
+<f:section name="content">
+    <f:if condition="{innerContainer}">
+        <f:then><div class="{innerContainer}">{content -> f:format.raw()}</div></f:then>
+        <f:else>{content -> f:format.raw()}</f:else>
+    </f:if>
+</f:section>
+</html>

@@ -1,0 +1,85 @@
+########################
+#   Global Configuration
+########################
+config {
+
+    #####################################################################
+    #	Debugging
+    #####################################################################
+    debug = {$config.debug}
+    admPanel = {$config.admPanel}
+
+    #####################################################################
+    #	Caching
+    #####################################################################
+    no_cache = {$config.no_cache}
+    sendCacheHeaders = 1
+    cache_period = {$config.cache_period}
+    additionalHeaders = Keep-Alive: 5|Expires: {$config.cache_period}
+
+    #####################################################################
+    #	indexed_search
+    #####################################################################
+    index_enable = 0
+    index_externals = 0
+
+
+    #####################################################################
+    #	Human-Readble URLS
+    #####################################################################
+    simulateStaticDocuments = 0
+    absRefPrefix = {$config.absRefPrefix}
+    prefixLocalAnchors = 1
+
+    #####################################################################
+    #	HTML-HEAD
+    #####################################################################
+    xhtml_cleaning = all
+    doctype = html5
+    xhtmlDoctype = none
+    xmlprologue = none
+    metaCharset = utf-8
+    #	title tag changer in metaseo
+    #   @Dependency: requires EXT:metaseo to be loaded!
+    titleTagFunction = Metaseo\Metaseo\Page\Part\PagetitlePart->main
+
+    #####################################################################
+    # misc
+    #####################################################################
+    disablePrefixComment = 1
+    #	Email-Adresse verschlüsseln, @ durch ' (at) ' ersetzen:
+    spamProtectEmailAddresses = 1
+    spamProtectEmailAddresses_atSubst = (at)
+
+    #####################################################################
+    #
+    #	Assets (Js/Css)
+    #
+    #####################################################################
+    inlineStyle2TempFile = 0
+
+    #	defaults
+    removeDefaultJs = 1
+    removeDefaultCss = 1
+
+    #	performance -use with care!
+    compressCss = {$config.production}
+    concatenateCss = {$config.production}
+    compressJs = {$config.production}
+    concatenateJs = {$config.production}
+
+    #####################################################################
+    #   Exception-handling:
+    #####################################################################
+    contentObjectExceptionHandler = {$config.production}
+    contentObjectExceptionHandler.errorMessage = Leider trat bei der Darstellung dieses Objekts ein Fehler auf: %s
+
+}
+
+
+#####################################################################
+#	Conditions
+#####################################################################
+[globalVar = TSFE:id = {$page.errorPage}]
+    page.config.additionalHeaders.404.header = HTTP/1.1 404 Not Found
+[global]

@@ -1,0 +1,18 @@
+# MENUES with dataprozessors
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+lib.mainmenu = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+lib.mainmenu {
+    special = directory
+    special.value = 1
+    levels = 3
+    expandAll = 1
+    includeSpacer = 1
+    titleField = nav_title // title
+    dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        10 {
+            references.fieldName = media
+        }
+    }
+}

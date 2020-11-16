@@ -1,0 +1,9 @@
+page {
+    pageUids {
+        root = 1
+        error404 = 2
+        foo = 3
+        # Directories
+        fooDir = 10
+    }
+}

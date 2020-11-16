@@ -1,0 +1,140 @@
+/* if bootstrap used:
+   add bootstrap imports and variables overwrite here
+*/
+
+
+// BOOTSTRAPPING
+/*!
+ * Bootstrap v4.0.0 (https://getbootstrap.com)
+ * Copyright 2011-2018 The Bootstrap Authors
+ * Copyright 2011-2018 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+@import "bootstrap-4.0.0/functions";
+@import "bootstrap-4.0.0/variables";
+@import "bootstrap-4.0.0/mixins";
+@import "bootstrap-4.0.0/root";
+@import "bootstrap-4.0.0/reboot";
+@import "bootstrap-4.0.0/type";
+@import "bootstrap-4.0.0/images";
+@import "bootstrap-4.0.0/code";
+@import "bootstrap-4.0.0/grid";
+@import "bootstrap-4.0.0/tables";
+@import "bootstrap-4.0.0/forms";
+@import "bootstrap-4.0.0/buttons";
+@import "bootstrap-4.0.0/transitions";
+@import "bootstrap-4.0.0/dropdown";
+@import "bootstrap-4.0.0/button-group";
+@import "bootstrap-4.0.0/input-group";
+@import "bootstrap-4.0.0/custom-forms";
+@import "bootstrap-4.0.0/nav";
+@import "bootstrap-4.0.0/navbar";
+@import "bootstrap-4.0.0/card";
+@import "bootstrap-4.0.0/breadcrumb";
+@import "bootstrap-4.0.0/pagination";
+@import "bootstrap-4.0.0/badge";
+@import "bootstrap-4.0.0/jumbotron";
+@import "bootstrap-4.0.0/alert";
+@import "bootstrap-4.0.0/progress";
+@import "bootstrap-4.0.0/media";
+@import "bootstrap-4.0.0/list-group";
+@import "bootstrap-4.0.0/close";
+@import "bootstrap-4.0.0/modal";
+@import "bootstrap-4.0.0/tooltip";
+@import "bootstrap-4.0.0/popover";
+@import "bootstrap-4.0.0/carousel";
+@import "bootstrap-4.0.0/utilities";
+@import "bootstrap-4.0.0/print";
+
+
+//variables
+@import "theme/variables";
+@import 'now-ui-kit/variables';
+
+
+//mixins
+//@import 'theme/custom/mixins';
+//Utilities
+@import "now-ui-kit/mixins/transparency";
+
+//Components
+@import "now-ui-kit/mixins/buttons";
+@import "now-ui-kit/mixins/vendor-prefixes";
+@import "now-ui-kit/mixins/inputs";
+@import "now-ui-kit/mixins/cards";
+@import "now-ui-kit/mixins/dropdown";
+@import "now-ui-kit/mixins/badges";
+@import "now-ui-kit/mixins/popovers";
+@import "now-ui-kit/mixins/modals";
+@import "now-ui-kit/mixins/pages";
+@import "now-ui-kit/mixins/datepicker";
+@import "now-ui-kit/mixins/tags";
+@import "theme/custom/mixins/when-inside";
+@import "theme/custom/mixins/navbar";
+
+
+// Plugins CSS
+@import "now-ui-kit/plugins/plugin-bootstrap-switch";
+@import "now-ui-kit/plugins/plugin-nouislider";
+@import "now-ui-kit/plugins/plugin-isometricGrids";
+@import "now-ui-kit/plugins/plugin-bootstrap-select";
+@import "now-ui-kit/plugins/plugin-tagsinput";
+@import "now-ui-kit/plugins/plugin-fileupload";
+@import "now-ui-kit/plugins/plugin-datetimepicker";
+
+// Core CSS
+@import "now-ui-kit/buttons";
+@import "now-ui-kit/inputs";
+@import "now-ui-kit/checkboxes-radio";
+@import "now-ui-kit/progress";
+@import "now-ui-kit/badges";
+@import "now-ui-kit/pagination";
+@import "now-ui-kit/typography";
+@import "now-ui-kit/misc";
+@import "now-ui-kit/pills";
+
+// components
+@import "now-ui-kit/tabs";
+@import "theme/custom/navbar";
+@import "now-ui-kit/dropdown";
+@import "now-ui-kit/alerts";
+@import "now-ui-kit/images";
+@import "now-ui-kit/popups";
+@import "theme/custom/nucleo-outline";
+@import "now-ui-kit/tables";
+@import "now-ui-kit/info-areas";
+@import "now-ui-kit/media";
+@import "now-ui-kit/modals";
+@import "now-ui-kit/carousel";
+@import "now-ui-kit/cards";
+@import "now-ui-kit/footers";
+
+// example pages and sections
+@import "now-ui-kit/example-pages";
+@import "now-ui-kit/sections";
+@import "now-ui-kit/responsive";
+@import "now-ui-kit/sections";
+@import "now-ui-kit/responsive";
+
+/* CUSTOM UTILIES*/
+@import "theme/custom/utilities/heights";
+/* Atoms */
+@import "theme/Components/Atoms/Sprites/sprite-default";
+@import "theme/Components/Atoms/Sprites/sprite";
+@import "theme/Components/Atoms/button";
+@import "theme/Components/Atoms/background-colors";
+@import "theme/Components/Atoms/unsplash-logo";
+@import "theme/Components/Atoms/card";
+
+/* Molekules */
+
+/* Organisms */
+@import "theme/Components/Organisms/navbar-main";
+@import "theme/Components/Organisms/page-header";
+
+
+/* Page / Layout */
+@import "theme/Components/Page/body";
+@import "theme/Components/Page/frame";
+

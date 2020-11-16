@@ -1,0 +1,16 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+     data-namespace-typo3-fluid="true">
+
+    <f:layout name="{layout}" />
+
+    <f:section name="Main">
+        <div class="hero-content">
+            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: 1}" />
+        </div>
+        <div class="main-content">
+            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: 0}" />
+        </div>
+    </f:section>
+
+</div>

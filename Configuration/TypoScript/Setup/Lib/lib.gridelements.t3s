@@ -1,0 +1,67 @@
+####
+#   default configuration for gridelements
+####
+lib {
+    gridelements.defaultGridSetup {
+        // stdWrap functions being applied to each element
+
+        columns {
+            default {
+                renderObj = COA
+                renderObj {
+                    # You can use registers to i.e. provide different image settings for each column
+                    # 10 = LOAD_REGISTER
+                    20 =< tt_content
+
+                    # And you can reset the register later on
+                    # 30 = RESTORE_REGISTER
+                }
+            }
+        }
+        # define the paths
+        cObject = FLUIDCONTENT
+        cObject.layoutRootPaths < lib.contentElement.layoutRootPaths
+        cObject.partialRootPaths < lib.contentElement.partialRootPaths
+
+    }
+
+    tt_content.shortcut.pages = COA
+    tt_content.shortcut.pages {
+        10 = USER
+        10 {
+            userFunc = tx_gridelements_view->user_getTreeList
+        }
+        20 = CONTENT
+        20 {
+            table = tt_content
+            select {
+                pidInList.data = register:pidInList
+                where = colPos >= 0
+                orderBy = colPos,sorting
+                orderBy.dataWrap = FIND_IN_SET(pid,'{register:pidInList}'),|
+            }
+        }
+    }
+
+
+}
+
+tt_content {
+    shortcut {
+        5 = LOAD_REGISTER
+        5 {
+            tt_content_shortcut_recursive.field = recursive
+        }
+        20 {
+            0 {
+                tables := addToList(pages)
+                conf.pages < lib.tt_content.shortcut.pages
+            }
+            1 {
+                tables := addToList(pages)
+                conf.pages < lib.tt_content.shortcut.pages
+            }
+        }
+    }
+}
+

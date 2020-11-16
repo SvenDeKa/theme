@@ -1,0 +1,5 @@
+mod.web_list {
+    enableDisplayBigControlPanel = activated
+    enableClipBoard = activated
+    enableLocalizationView = activated
+}

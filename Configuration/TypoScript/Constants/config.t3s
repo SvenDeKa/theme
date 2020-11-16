@@ -1,0 +1,22 @@
+config {
+    #   type of environment
+    production = 1
+    development = 0
+
+    #   debugging
+    debug = 0
+
+    #   caching
+    no_cache = 0
+
+    #   environment relevant contants
+    absRefPrefix = /
+    # caching
+    cache_period = 5184000
+
+    #   admin-tools in the frontend?
+    admPanel = 0
+
+    #   exception-handling
+    contentObjectExceptionHandler = 0
+}

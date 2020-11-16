@@ -1,0 +1,18 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+    <f:if condition="{rows}">
+        <f:for each="{rows}" as="columns" key="rowNumber">
+            <div id="c{data.uid}-{rowNumber}" class="row row-{rowNumber} {f:if(condition: cssModifier, then: ' {cssModifier}')">
+                <f:if condition="{columns}">
+                    <f:for each="{columns}" as="column" key="columnNumber">
+                        <div id="c{data.uid}-{columnNumber}" class="col column-{columnNumber}">
+                            <f:for each="{column}" as="child">
+                                <f:render partial="Child"
+                                          arguments="{data: child.data, children: child.children, options: options, settings: settings}"/>
+                            </f:for>
+                        </div>
+                    </f:for>
+                </f:if>
+            </div>
+        </f:for>
+    </f:if>
+</html>

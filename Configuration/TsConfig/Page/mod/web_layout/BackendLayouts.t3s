@@ -1,0 +1,41 @@
+mod.web_layout.BackendLayouts {
+    default{
+        title = Default (theme)
+        icon = EXT:theme/Resources/Public/Backend/Icons/BackendLayouts/Default.gif
+        config {
+            backend_layout {
+                colCount = 12
+                rowCount = 3
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Header-Content
+                                colPos = 1
+                                colspan = 12
+                            }
+                        }
+                    }
+                    2 {
+                        columns {
+                            1 {
+                                name = Content
+                                colPos = 0
+                                colspan = 12
+                            }
+                        }
+                    }
+                    3 {
+                        columns {
+                            1 {
+                                name = Footer-Content
+                                colPos = 2
+                                colspan = 12
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

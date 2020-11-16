@@ -1,0 +1,99 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:comment>
+
+    VARIABLES
+    =========
+
+    url: url
+    target:         window target. if <a>
+    content:        everything inside the tag...
+    style:
+        * ''
+        * link      link when normal button on :active
+    color:
+        * primary
+        * secondary
+        * info
+        * success
+        * warning
+        * error
+        * neutral
+    size:
+        * small
+        * large
+    shape:
+        * ''
+        * round
+    isOutline: 1/0
+
+</f:comment>
+<f:render section="{f:if(condition:url, then:'link',else:'button')}" arguments="{
+        url: url,
+        color: '{f:if(condition:color,then:color,else:\'primary\')}',
+        size: size,
+        shape: shape,
+        style: style,
+        isOutline: isOutline,
+        content: content
+    }"/>
+<f:comment>
+
+    LINK
+    ====
+
+</f:comment>
+    <f:section name="link">
+        <f:spaceless>
+        <a href="{url}"
+           target="{f:if(condition:target,then:'_target',else:'_top')}"
+           class="btn{f:render(
+            section: '_cssClasses',
+            arguments: '{_all}'
+        )}">{content}</a>
+        </f:spaceless>
+    </f:section>
+<f:comment>
+
+    BUTTON
+    ======
+
+</f:comment>
+    <f:section name="button">
+        <f:spaceless>
+            <button class="btn{f:render(
+                section:'_cssClasses',
+                arguments: '{_all}'
+            )}">{content}</button>
+        </f:spaceless>
+    </f:section>
+<f:comment>
+
+    helpers:
+    CSS-CLASSES
+    ======
+
+</f:comment>
+<f:section name="_cssClasses">{f:if(condition:'{style} == link',
+        then:' btn-{style}'
+    )}{f:if(condition:'{color} == primary
+        || {color} == secondary
+        || {color} == info
+        || {color} == success
+        || {color} == warning
+        || {color} == error
+        || {color} == neutral',
+        then:' btn-{color}'
+    )}{f:if(condition:'{isOutline}',
+        then:' btn-outline-{color}'
+    )}{f:if(condition:'{size} == large',
+        then:' btn-lg'
+    )}{f:if(condition:'{size} == small',
+        then:' btn-sm'
+    )}{f:if(condition:'{shape} == round',
+        then:' btn-{shape}'
+    )}{f:if(condition: icon,
+        then:' btn-icon'
+    )}</f:section>
+</html>

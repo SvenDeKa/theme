@@ -1,0 +1,10 @@
+### modifying table-appearance in the backend:
+TCEFORM.pages {
+    #	misc which is for admins only
+    is_siteroot.disabled = 1
+    editlock.disabled = 1
+    php_tree_stop.disabled =
+    module.disabled = 1
+    storage_pid.disabled = 1
+    TSconfig.disabled = 1
+}

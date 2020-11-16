@@ -1,0 +1,189 @@
+page = PAGE
+page {
+    typeNum = 0
+
+    ######################################################
+    #   manipulate the Body-tag to carry the selected layout value as a class
+    ######################################################
+    bodyTag >
+    bodyTagCObject = TEXT
+    bodyTagCObject {
+        data = levelfield:-2,layout,slide
+        ifEmpty = default
+        wrap = <body class="layout-page layout-page--|">
+    }
+
+    ######################################################
+    # the Main part of the Website. <body>
+    ######################################################
+    10 = FLUIDTEMPLATE
+    10 {
+        templateName = TEXT
+        templateName.stdWrap {
+            cObject = TEXT
+            cObject {
+                data = levelfield:-2,backend_layout_next_level,slide
+                override.field = backend_layout
+                split {
+                    token = pagets__
+                    1 {
+                        current = 1
+                        wrap = |
+                    }
+
+                }
+            }
+            ifEmpty = Default
+        }
+
+        layoutRootPaths {
+            10 = {$styles.templates.layoutRootPath}Page/
+        }
+        partialRootPaths {
+            10 = {$styles.templates.partialRootPath}
+        }
+        templateRootPaths {
+            10 = {$styles.templates.templateRootPath}Page/
+        }
+
+        variables {
+            layout = CASE
+            layout {
+                key.field = layout
+                1 = TEXT
+                1.value = Styleguide
+                default = TEXT
+                default.value = Default
+            }
+        }
+
+        settings {
+            pageUids {
+                root = {$page.pageUids.root}
+            }
+            svg < lib.svgSettings
+        }
+
+        # requires config.contentObjectExceptionHandler = 1
+        exceptionHandler = {$config.production}
+        exceptionHandler {
+            errorMessage = Page has an error. Code: %s
+            ignoreCodes.10 = 1987654321
+        }
+
+
+        dataProcessing {
+            # use a Dataprocessor to load your menu into the FLUIDTEMPlATE-variable mainmenu
+            10 < lib.mainmenu
+            10 {
+                as = mainmenu
+            }
+            #
+            20 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            20 {
+                references.fieldName = media
+            }
+        }
+    }
+
+    ######################################################
+    #
+    #   Assets
+    #
+    ######################################################
+
+    ######################################################
+    #   CSS
+    ######################################################
+    includeCSS {
+        01_font = https://fonts.googleapis.com/css?family=Montserrat:400,700,200
+        02_font = https://use.fontawesome.com/releases/v5.7.1/css/all.css
+#                integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"
+#        03_bootstrap = EXT:theme/Resources/Public/Css/Vendor/bootstrap.min.css
+        10_main = EXT:theme/Resources/Public/Css/Frontend/main.css
+    }
+
+    ######################################################
+    #   JS (libraries) loaded in Head before all other JS
+    ######################################################
+    includeJSLibs {
+        jquery = EXT:theme/Resources/Public/Js/Vendor/core/jquery.3.2.1.min.js
+        svg4everybody = EXT:theme/Resources/Public/Js/Vendor/polyfills/svg4everybody.legacy.min.js
+        picturefill = EXT:theme/Resources/Public/Js/Vendor/polyfills/picturefill.min.js
+    }
+
+    ######################################################
+    #   JS (libraries) loaded before </body> before all other JS
+    ######################################################
+    includeJSFooterlibs {
+        00_lazysizes = EXT:theme/Resources/Public/Js/Vendor/lazysizes.min.js
+        #   now-ui-kit stuff
+        01_popper = EXT:theme/Resources/Public/Js/Vendor/core/popper.min.js
+        02_bootstrap = EXT:theme/Resources/Public/Js/Vendor/core/bootstrap.min.js
+        03_moment = EXT:theme/Resources/Public/Js/Vendor/plugins/moment.min.js
+        04_switch = EXT:theme/Resources/Public/Js/Vendor/plugins/bootstrap-switch.js
+        ## Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs
+        05_tagsinput = EXT:theme/Resources/Public/Js/Vendor/plugins/bootstrap-tagsinput.js
+        ## Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select
+        06_selecticker = EXT:theme/Resources/Public/Js/Vendor/plugins/bootstrap-selectpicker.js
+        ## Google Maps Plugin
+        07_mapapi = https://maps.googleapis.com/maps/api/js?key={$apiKeys.googleMap}
+        ## Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+        08_fileupload = EXT:theme/Resources/Public/Js/Vendor/plugins/jasny-bootstrap.min.js
+        ## Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+        09_slider = EXT:theme/Resources/Public/Js/Vendor/plugins/nouislider.min.js
+        ## Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker -->
+        10_datetimepicker = EXT:theme/Resources/Public/Js/Vendor/plugins/bootstrap-datetimepicker.min.js
+        ## Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
+        11_nowKitStuff = EXT:theme/Resources/Public/Js/Vendor/now-ui-kit.js?v=1.2.0
+
+        #   some of the useful stuff possible:
+        #deviceRange = EXT:theme/Resources/Public/Js/Libs/team23.deviceRange.js
+        #viewportHack = EXT:theme/Resources/Public/Js/Libs/team23.viewportHack.js
+        #navToggle = EXT:theme/Resources/Public/Js/Libs/team23.navToggle.js
+        #inviewLib = EXT:theme/Resources/Public/Js/Libs/JQuery/Plugins/Inview/jquery.inview.min.js
+        #infiniteScroll = EXT:theme/Resources/Public/Js/Libs/team23.infiniteScroll.js
+        #featherlight = EXT:theme/Resources/Public/Js/Libs/JQuery/Plugins/Featherlight/featherlight.js
+        #featherlightGallery = EXT:theme/Resources/Public/Js/Libs/JQuery/Plugins/Featherlight/featherlight.gallery.js
+
+    }
+
+    ######################################################
+    #   JS loaded before </body>
+    ######################################################
+    includeJSFooter {
+        main = EXT:theme/Resources/Public/Js/main.js
+    }
+
+    ######################################################
+    #
+    #   HeaderData writes into <head>
+    #
+    ######################################################
+    headerData {
+        ####
+        #   HEADERDATA TEMPLATE based:
+        #   viewport
+        #   favicon
+        #   Javascript-Globals -partly filled with TS
+        ####
+        20 = FLUIDTEMPLATE
+        20 {
+            file = EXT:theme/Resources/Private/Templates/Standalone/HeaderData.html
+            settings {
+                pageUids {
+                    root = {$page.pageUids.root}
+                }
+            }
+        }
+        400 < lib.hrefLang
+    }
+
+    ######################################################
+    #   Simple way of including a Favicon
+    #   -NOTE: the Docs state that this has to be a valid .ico file.
+    ######################################################
+    # shortcutIcon = EXT:theme/Resources/Public/Images/Frontend/Icons/favicon.png
+
+}
+

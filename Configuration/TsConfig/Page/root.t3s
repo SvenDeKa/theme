@@ -1,0 +1,26 @@
+#####################################################################
+#
+#   Backend Configuration for all pages (included in Root-Page)
+#
+#####################################################################
+
+### EXT  configuration ###
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme/Configuration/TsConfig/Page/EXT" extensions="t3s">
+
+### module  configuration ###
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme/Configuration/TsConfig/Page/mod" extensions="t3s">
+
+### TCA defaults ###
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme/Configuration/TsConfig/Page/TCAdefaults" extensions="t3s">
+
+### TCEMAIN ###
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme/Configuration/TsConfig/Page/TCEMAIN" extensions="t3s">
+
+### TCEFORM ###
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme/Configuration/TsConfig/Page/TCEFORM" extensions="t3s">
+
+####################
+# more possibilities
+####################
+### RTE ###
+### gridelements ###

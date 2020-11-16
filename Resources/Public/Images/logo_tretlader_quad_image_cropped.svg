@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="80"
+   height="120"
+   viewBox="0 0 80.000007 1200.0001"
+   id="svg4199"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="logo_tretlader_quad_image_cropped.svg">
+  <metadata
+     id="metadata15">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="Tretlader | Lastenrad Fuhrpark Beratung">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Tretlader | Lastenrad Fuhrpark Beratung</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs13" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1289"
+     inkscape:window-height="686"
+     id="namedview11"
+     showgrid="false"
+     inkscape:zoom="3.75238"
+     inkscape:cx="49.595132"
+     inkscape:cy="63.70319"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg4199" />
+  <g
+     id="layer1"
+     transform="matrix(1.3928571,0,0,1.3996046,-790.71434,-41.947297)">
+    <g
+       data-name="Ebene 2"
+       id="Ebene_2"
+       transform="matrix(12.082247,0,0,12.082247,300.99466,45.013666)">
+      <g
+         data-name="Ebene 1"
+         id="Ebene_1-2">
+        <rect
+           id="rect4949"
+           height="20.327"
+           width="44.848999"
+           y="13.952"
+           x="2.323"
+           class="cls-1"
+           style="fill:none;stroke:#3deaaf;stroke-width:1.5px;stroke-miterlimit:10" />
+        <line
+           id="line4951"
+           y2="9.099"
+           x2="47.172001"
+           y1="9.099"
+           x1="2.323"
+           class="cls-2"
+           style="fill:none;stroke:#3deaaf;stroke-width:0.75px;stroke-miterlimit:10" />
+        <line
+           id="line4953"
+           y2="69.125999"
+           x2="24.747999"
+           y1="38.922001"
+           x1="24.747999"
+           class="cls-2"
+           style="fill:none;stroke:#3deaaf;stroke-width:0.75px;stroke-miterlimit:10" />
+        <circle
+           id="circle4955"
+           r="3.872"
+           cy="43.002998"
+           cx="35.395"
+           class="cls-2"
+           style="fill:none;stroke:#3deaaf;stroke-width:0.75px;stroke-miterlimit:10" />
+        <path
+           id="path4957"
+           d="m 8.449,4.247 a 3.872,3.872 0 1 1 7.743,0 z"
+           class="cls-2"
+           style="fill:none;stroke:#3deaaf;stroke-width:0.75px;stroke-miterlimit:10"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+  </g>
+</svg>

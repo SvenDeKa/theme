@@ -1,0 +1,54 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+     data-namespace-typo3-fluid="true">
+
+    <f:section name="Nav">
+        <ul class="navbar-nav ml-auto" role="menubar">
+            <f:for each="{items}" as="item"><f:render section="NavItem" arguments="{item: item}"/></f:for>
+        </ul>
+    </f:section>
+
+    <f:section name="NavItem">
+        <li class="nav-item{f:if(condition:item.children,then:' dropdown')}">
+            <a class="nav-link{f:if(condition:item.children,then:' dropdown-toggle')}"
+               href="{item.link}"
+               {f:if(condition:item.children, then:' data-toggle="dropdown" aria-expanded="false"')}
+            >{item.title}</a>
+            <f:if condition="{item.children}"><f:render section="NavDropdown" arguments="{items:item.children}"/></f:if>
+        </li>
+    </f:section>
+
+    <f:section name="NavDropdown">
+        <f:comment>.dropdown-menu-right</f:comment>
+        <div class="dropdown-menu dropdown-menu-center" aria-labelledby="navbarDropdownMenuLink">
+            <f:for each="{items}" as="item">
+                <a class="dropdown-item" href="{item.link}">
+                    <!--<i class="now-ui-icons shopping_box"></i> -->{item.title}
+                </a>
+            </f:for>
+        </div>
+    </f:section>
+
+    <!--
+    <f:section name="MenuItemNested">
+        <li class="menu-item{f:if(condition:page.current, then:' menue-item--current')}{f:if(condition:page.active, then:' menue-item--active')}{f:if(condition:page.children, then:' menue-item--children')}"
+            role="menuitem" aria-haspopup="{f:if(condition:page.children, then:'true', else:'false')}" tabindex="0">
+            <a tabindex="{iteration.cycle -> v:math.sum(b: 100)}"
+               href="{page.link}"
+               data-title="{page.title}"
+               target="{page.target}">{page.title}</a>
+            <f:if condition="{page.children}">
+                <ul class="navigation--level-2" role="menu" aria-hidden="true">
+                    <f:for each="{page.children}" as="subPage" iteration="subiteration">
+                        <li class="menu-item {f:if(condition:subPage.current, then:' menue-item--current')}{f:if(condition:subPage.active, then:' menue-item--active')}"
+                            role="menuitem" tabindex="-1">
+                            <a href="{subPage.link}" target="{subPage.target}">{subPage.title}</a>
+                        </li>
+                    </f:for>
+                </ul>
+            </f:if>
+        </li>
+    </f:section>
+    -->
+</div>

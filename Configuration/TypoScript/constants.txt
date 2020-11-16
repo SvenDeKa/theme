@@ -1,0 +1,1 @@
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme/Configuration/TypoScript/Constants" extensions="t3s">

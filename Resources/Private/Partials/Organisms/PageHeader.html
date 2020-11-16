@@ -1,0 +1,54 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+     data-namespace-typo3-fluid="true">
+<f:render section="Default"
+    arguments="{
+        layout: layout,
+        bgImgURL: bgImgURL,
+        header: header,
+        credits: 1,
+        parallax: parallax,
+        content: content
+    }"
+>{content}</f:render>
+<f:section name="Default">
+    <div class="page-header{f:if(condition:'{layout} >= 0',then:' page-header--{layout}')}">
+        <div class="page-header-image"
+             data-parallax="{f:if(condition:parallax, then: 'true')}"
+             style="background-image: url('{f:uri.image(src:bgImgURL)}');">
+            <f:render partial="Atoms/UnsplashLogo" arguments="{
+                publisher: 'static',
+                source: 'https://asdfghjk.de/',
+                creator:'dude lebowski',
+                position:'bottom-right'
+            }"/>
+        </div>
+        <div class="content-center">
+            {content -> f:format.raw()}
+        </div>
+    </div>
+</f:section>
+
+<f:section name="dynamic">
+    <f:alias map="{count:'{f:cObject(typoscriptObjectPath:\'lib.dynamicContentCount\',data:\'{colPos: 1, pageUid:contentPid}\')}'}">
+        <f:if condition="{count} > 0">
+            <div class="hero-slider">
+                <div class="hero-slider-wrapper{f:if(condition:'{count} == 1',then:' hero-slider-wrapper--single-item')}{f:if(condition: '{layout} == Home', then: ' hero-slider-wrapper--home')}">
+                    <div class="hero-slider-wrapper__slick slick-hero-slider">
+                        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: 1, pageUid:contentPid}" />
+                    </div>
+                    <f:if condition="{count} > 1">
+                        <div class="o-slider__command-container hero-slider-wrapper__command-container">
+                            <div class="o-slider__commands o-slider__commands--dark o-slider__commands--opacity ce-hero-slider__commands">
+                                <span class="icon svg-icon-chevron-left-32-dims hero-slider-prev-arrow"><t23:icon name="icon-chevron-left-32" viewBox="0 0 32 32"/></span>
+                                <div class="o-slider__info picture-slider-info"></div>
+                                <span class="icon svg-icon-chevron-right-32-dims hero-slider-next-arrow"><t23:icon name="icon-chevron-right-32" viewBox="0 0 16 16"/></span>
+                            </div>
+                        </div>
+                    </f:if>
+                </div>
+            </div>
+        </f:if>
+    </f:alias>
+</f:section>
+</html>

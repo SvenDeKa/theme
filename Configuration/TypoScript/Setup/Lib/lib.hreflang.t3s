@@ -1,0 +1,77 @@
+# hreflang tags
+# x-default-Sprache ist de (L=0)
+
+lib.hrefLang = HMENU
+lib.hrefLang {
+    special = language
+    special {
+        value = 0,1
+        normalWhenNoLanguage = 0
+    }
+
+    1 = TMENU
+    1 {
+        NO = 1
+        NO {
+            stdWrap.cObject = TEXT
+            stdWrap.cObject {
+                value = de || en
+            }
+
+            linkWrap = <link rel="alternate" hreflang="|
+            doNotLinkIt = 1
+            after.cObject = TEXT
+            after.cObject {
+                stdWrap.wrap = " href="{$page.url}|" />
+                stdWrap.typolink.parameter.data = page:uid
+                stdWrap.typolink.additionalParams = &L=0 || &L=1
+                stdWrap.typolink.returnLast = url
+            }
+
+            # x-default. Normal ist de(0), aber wnen nicht vorhanden dann en(1)
+            # kommt hier nicht vor, nur falls mal en zur default-sprache wird.
+            before.cObject = TEXT
+            before.cObject {
+                stdWrap.wrap.cObject = TEXT
+                stdWrap.wrap.cObject {
+                    value =
+                    stdWrap.wrap = || <link rel="alternate" hreflang="x-default" href="{$page.url}|" /> || || || || || || || ||
+                    stdWrap.typolink.additionalParams = &L=0
+                    stdWrap.typolink.parameter.data = page:uid
+                    stdWrap.typolink.returnLast = url
+
+                    if.isTrue.cObject = TEXT
+                    if.isTrue.cObject.stdWrap.wrap = || 1 || ||
+                }
+            }
+        }
+
+        CUR = 1
+        CUR {
+            doNotShowLink = 1
+        }
+
+        # Seite existiert nicht in Übersetzung, also keine hreflang tags für die Sprache generieren!
+        USERDEF1 < .NO
+        USERDEF1 {
+            doNotShowLink = 1
+            doNotLinkIt = 1
+            linkWrap >
+            stdWrap >
+            after >
+            before.cObject {
+                stdWrap.wrap.cObject {
+                    stdWrap.typolink.additionalParams = &L=0
+                }
+            }
+        }
+    }
+}
+
+[globalVar = GP:tx_news_pi1|news > 0]
+    # better remove hreflang tags than show wrong ones. Maybe add again later with a solution supporting news
+    lib.hrefLang >
+[GLOBAL]
+
+
+

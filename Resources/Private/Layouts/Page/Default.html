@@ -1,0 +1,39 @@
+<f:layout name="Default" />
+
+<f:render partial="Organisms/Navbar" arguments="{
+    expandClass: 'navbar-expand-lg',
+    positionClass: 'fixed-top',
+    bgClass: 'bg-brand-blue',
+    colorOnScroll: 200,
+    items:mainmenu,
+    organismName: 'navbar-main'}"
+/>
+<div class="wrapper">
+    <f:render partial="Organisms/PageHeader" arguments="{
+                layout: 0,
+                bgImgURL: '/fileadmin/user_upload/unsplash/bike/rodrigo-kugnharski-661146-unsplash.jpg',
+                credits: 1}" contentAs="content">
+        <h1 class="page-header__title">Ihre Verkehrswende<span class="muted">Ihr Lastenrad</span></h1>
+        <div class="text-center">
+            <div class="text-center">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+                    natoque penatibus et magnis dis parturient montes, nascetur
+                    ridiculus mus. Donec quam felis, ultricies nec, pellentesque
+                    eu, pretium quis, sem.
+                </p>
+                <f:render partial="Atoms/Button"
+                          arguments="{
+                                url:'http://example.com',
+                                target:'_blank'
+                            }"
+                          contentAs="content">lorem buttontext</f:render>
+            </div>
+        </div>
+    </f:render>
+
+
+    <f:render section="Main" />
+</div>
+<f:render partial="Organisms/Footer" arguments="{_all}"/>

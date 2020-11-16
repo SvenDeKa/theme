@@ -1,0 +1,9 @@
+TCEFORM.sys_category {
+#    description.disabled = 1
+#    single_pid.disabled = 1
+#    shortcut.disabled = 1
+#    seo_title.disabled = 1
+#    seo_description.disabled = 1
+#    seo_headline.disabled = 1
+#    seo_text.disabled = 1
+}

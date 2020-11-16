@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   width="1200"
+   height="120"
+   viewBox="0 0 1200.0001 1200.0001"
+   id="svg4199"
+   version="1.1">
+  <g
+     id="layer1"
+     transform="translate(0,147.63824)">
+    <g
+       data-name="Ebene 2"
+       id="Ebene_2"
+       transform="matrix(12.082247,0,0,12.082247,300.99466,45.013666)">
+      <g
+         data-name="Ebene 1"
+         id="Ebene_1-2">
+        <rect
+           id="rect4949"
+           height="20.327"
+           width="44.848999"
+           y="13.952"
+           x="2.323"
+           class="cls-1"
+           style="fill:none;stroke:#3deaaf;stroke-width:1.5px;stroke-miterlimit:10" />
+        <line
+           id="line4951"
+           y2="9.099"
+           x2="47.172001"
+           y1="9.099"
+           x1="2.323"
+           class="cls-2"
+           style="fill:none;stroke:#3deaaf;stroke-width:0.75px;stroke-miterlimit:10" />
+        <line
+           id="line4953"
+           y2="69.125999"
+           x2="24.747999"
+           y1="38.922001"
+           x1="24.747999"
+           class="cls-2"
+           style="fill:none;stroke:#3deaaf;stroke-width:0.75px;stroke-miterlimit:10" />
+        <circle
+           id="circle4955"
+           r="3.872"
+           cy="43.002998"
+           cx="35.395"
+           class="cls-2"
+           style="fill:none;stroke:#3deaaf;stroke-width:0.75px;stroke-miterlimit:10" />
+        <path
+           id="path4957"
+           d="m 8.449,4.247 a 3.872,3.872 0 1 1 7.743,0 z"
+           class="cls-2"
+           style="fill:none;stroke:#3deaaf;stroke-width:0.75px;stroke-miterlimit:10" />
+      </g>
+    </g>
+  </g>
+</svg>

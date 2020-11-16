@@ -1,0 +1,35 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+     data-namespace-typo3-fluid="true">
+    <f:render section="Navbar" arguments="{
+    expandClass: expandClass,
+    positionClass: positionClass,
+    bgClass: bgClass,
+    colorOnScroll: colorOnScroll,
+    items: items,
+    organismName: organismName
+    }"/>
+
+    <f:section name="Navbar">
+        <f:spaceless>
+        <nav class="navbar {organismName} {expandClass} {positionClass} {bgClass} {f:if(condition: '{colorOnScroll} > 0', then:'navbar-transparent')}" color-on-scroll="{colorOnScroll}" role="navigation" aria-label="LLL:aria.navbar.main}">
+            <div class="container">
+                <div class="navbar-translate">
+                    <a class="navbar-brand" href="{f:uri.page(pageUid:settings.pageUids.root)}" rel="tooltip" title="LLL:website.title" data-placement="bottom">
+                        <img src="{f:uri.image(src: 'EXT:theme/Resources/Public/Images/logo_tretlader_quad_image_cropped.svg')}" alt="Tretlader - Lastenrad Fuhrpark Beratung Vertrieb" class="navbar-brand__logo"/>
+                        <span class="navbar-brand__word">TRETLADER</span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="LLL:aria.navbar.toggle">
+                        <span class="navbar-toggler-bar bar1"></span>
+                        <span class="navbar-toggler-bar bar2"></span>
+                        <span class="navbar-toggler-bar bar3"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" data-nav-image="/fileadmin/user_upload/unsplash/bike/rodrigo-kugnharski-661146-unsplash_blurred.jpeg" data-color="brand-blue">
+                    <f:render partial="Molekules/Navbar/Nav" section="Nav" arguments="{items:items}"/>
+                </div>
+            </div>
+        </nav>
+        </f:spaceless>
+    </f:section>
+</div>

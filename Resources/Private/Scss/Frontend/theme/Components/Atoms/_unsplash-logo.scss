@@ -1,0 +1,50 @@
+.unsplash-logo {
+
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  padding: 4px 6px;
+  font-family: -apple-system, BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', Helvetica, Ubuntu, Roboto, Noto, 'Segoe UI', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.2;
+  display: inline-block;
+  border-radius: 3px;
+  opacity: 0.4;
+  position: absolute;
+
+  &--white {
+    background-color: white;
+    color: black;
+  }
+
+
+  &--top-left {
+    top: 5px;
+    left: 5px;
+  }
+  &--top-right {
+    top: 5px;
+    right: 5px;
+  }
+  &--bottom-right {
+    bottom: 5px;
+    right: 5px;
+  }
+  &--bottom-left {
+    bottom: 5px;
+    left: 5px;
+  }
+
+  &__svg {
+    display: inline-block;
+    padding: 2px 3px;
+  }
+
+  &__creator {
+    display: inline-block;
+    padding: 2px 3px;
+  }
+
+}
+

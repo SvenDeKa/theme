@@ -1,0 +1,33 @@
+.card {
+
+  &--background {
+    @extend .card-background;
+    color: $white-color;
+  }
+
+  &--linked {
+    transition: all .2s ease-in-out;
+
+    &.card-background {
+      &:after {
+        transition: background-color .2s ease-in-out;
+      }
+      &:hover {
+        &:after {
+          background-color: rgba(0,0,0,.83);
+        }
+      }
+    }
+
+    &:hover {
+      text-decoration: none;
+      @extend .card-raised;
+
+    }
+  }
+
+  &--raised {
+    @extend .card-raised;
+  }
+
+}

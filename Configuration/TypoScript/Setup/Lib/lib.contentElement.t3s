@@ -1,0 +1,15 @@
+lib.contentElement {
+    layoutRootPaths {
+        10 = {$styles.templates.layoutRootPath}Content
+    }
+    templateRootPaths {
+        10 = {$styles.templates.templateRootPath}Content
+    }
+    partialRootPaths {
+        10 = {$styles.templates.partialRootPath}
+    }
+    settings.svg < lib.svgSettings
+}
+
+# legacy:
+lib.fluidContent =< lib.contentElement

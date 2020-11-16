@@ -1,0 +1,96 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+    <section class="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 ml-auto mr-auto text-center">
+                    <h2 class="title">Was kann ich für Sie tun</h2>
+                    <summary class="description">
+                        <p>
+                            Moderne Lastenräder läuten die Verkehrswende ein: Dank Cargobikes müssen Handwerker nicht mehr im Stau stehen. Lieferdienste können mit pedalbetriebenen Lieferfahrzeugen die letzte Meile kostengünstiger und flexibler absolvieren. Familien können sich von der finanziellen Last des Zweitwagens (oder gänzlich vom Kfz) befreien.
+                        </p>
+                        <!--
+                        <p>
+                            Interessante Fahrzeugkonzepte sprießen förmlich aus dem Boden und machen das Kraftfahrzeug in Innenstädten zunehmend überflüssig. Wollen auch Sie umdenken, so gibt es für Ihre Umstände bestimmt das passende Fahrzeug.
+                        </p>
+                        -->
+                        <!--
+                        <p>
+                            Als (Lasten-)Radenthusiast mit mehrjähriger Erfahrung in der Fahrradbranche biete ich Ihnen
+                        </p>
+                        -->
+                    </summary>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <f:render partial="Atoms/Card"
+                              contentAs="content"
+                              arguments="{
+                                bgImgURL: '/typo3conf/ext/theme/Resources/Public/StyleguideAssets/img/bg1.jpg',
+                                innerContainer: 'card-body',
+                                link: '/styleguide/',
+                                class: 'stretch-md'
+                              }">
+                        <h3 class="title">
+                            Lastenrad
+                        </h3>
+                        <p class="text-left">
+                            Eine kleine Handvoll von Fahrzeugen für die ich meine
+                            Hand ins Feuer lege, sofern der Einsatzzweck stimmt vertreibe
+                            ich direkt.
+                            <br>
+                            Ich lege aber Wert darauf, dass diese Fahrzeuge wirklich zu Ihnen passen.
+                        </p>
+                    </f:render>
+                </div>
+                <div class="col-md-4">
+                    <f:render partial="Atoms/Card"
+                              contentAs="content"
+                              arguments="{
+                                bgImgURL: '/typo3conf/ext/theme/Resources/Public/StyleguideAssets/img/bg1.jpg',
+                                innerContainer: 'card-body',
+                                class: 'stretch-md'
+                              }">
+                        <h3 class="title">
+                            Fuhrpark
+                        </h3>
+                        <p class="text-left">
+                            Sie möchten Ihren Fuhrpark umstellen, aber sich nicht um die Instandhaltung kümmern?
+                            <br>
+                            Lassen Sie und über ein Lastenrad-as-a-Service reden!
+                        </p>
+                        <div class="card-footer">
+                            <f:render partial="Atoms/Button" arguments="{
+                            url:'#',
+                            isOutline: 1,
+                            size: 'large',
+                            shape: 'round'
+                            }" contentAs="content">jetzt mehr erfahren</f:render>
+                        </div>
+                    </f:render>
+                </div>
+                <div class="col-md-4">
+                    <f:render partial="Atoms/Card"
+                              contentAs="content"
+                              arguments="{
+                                bgImgURL: '/typo3conf/ext/theme/Resources/Public/StyleguideAssets/img/bg1.jpg',
+                                innerContainer: 'card-body',
+                                class: 'stretch-md'
+                              }">
+                        <h3 class="title">
+                            Beratung
+                        </h3>
+                        <p class="text-left">
+                            Bei Ihrer persönlichen Mobilitätswende berate ich Sie gerne persönlich
+                            und stehe Ihnen mit Branchenkenntnis und 1.Hand-Erfahrungen zur Seite.
+                            <br>
+                            Damit auch Sie Kraffahrzeugkilometer einsparen und somit Resourcen befreien können.
+                        </p>
+                    </f:render>
+                </div>
+            </div>
+        </div>
+    </section>
+</html>

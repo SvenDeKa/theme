@@ -1,0 +1,43 @@
+.stretch {
+  @include media-breakpoint-up('xs'){
+    &-xs {
+      height: 100%;
+    }
+  }
+
+  @include media-breakpoint-up('sm'){
+    &-sm {
+      height: 100%;
+    }
+    &-reset-sm {
+      height: auto;
+    }
+  }
+
+  @include media-breakpoint-up('md'){
+    &-md {
+      height: 100%;
+    }
+    &-reset-md {
+      height: auto;
+    }
+  }
+
+  @include media-breakpoint-up('lg'){
+    &-lg {
+      height: 100%;
+    }
+    &-reset-lg {
+      height: auto;
+    }
+  }
+
+  @include media-breakpoint-up('xl'){
+    &-xl {
+      height: 100%;
+    }
+    &-reset-xl {
+      height: auto;
+    }
+  }
+}

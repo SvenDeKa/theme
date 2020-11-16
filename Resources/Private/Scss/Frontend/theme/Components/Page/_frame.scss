@@ -1,0 +1,53 @@
+.frame {
+
+  //  Colors;
+  &--background-1 {
+    background-color: $medium-gray;
+  }
+  &--background-2 {
+    background-color: $dark-gray;
+  }
+  &--background-3 {
+    background-color: $brand-blue;
+  }
+  &--background-4 {
+    background-color: $brand-green;
+  }
+
+  //  Spacing
+  &--padding-before {
+    &-extra-small {
+      padding-top: $padding-simple-vertical;
+    }
+    &-small {
+      padding-top: $padding-simple-vertical*2;
+    }
+    &-medium {
+      padding-top: $padding-simple-vertical*4;
+    }
+    &-large {
+      padding-top: $padding-simple-vertical*6;
+    }
+    &-extra-large {
+      padding-top: $padding-simple-vertical*8;
+    }
+  }
+  &--padding-after {
+    &-extra-small {
+      padding-bottom: $padding-simple-vertical;
+    }
+    &-small {
+      padding-bottom: $padding-simple-vertical*2;
+    }
+    &-medium {
+      padding-bottom: $padding-simple-vertical*4;
+    }
+    &-large {
+      padding-bottom: $padding-simple-vertical*6;
+    }
+    &-extra-large {
+      padding-bottom: $padding-simple-vertical*8;
+    }
+  }
+
+}

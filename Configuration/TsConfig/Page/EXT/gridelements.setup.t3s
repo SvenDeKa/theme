@@ -1,0 +1,71 @@
+tx_gridelements.setup {
+    GridRow333333 {
+        title =  LLL:EXT:theme/Resources/Private/Language/locallang_mod.xlf:gridelements.gridRow333333.title
+        description = LLL:EXT:theme/Resources/Private/Language/locallang_mod.xlf:gridelements.gridRow333333.description
+        icon = EXT:theme/Resources/Public/Backend/Icons/Grid/33-33-33.png
+        frame = 1
+        topLevelLayout = 1
+        config {
+            colCount = 12
+            rowCount = 1
+            rows.1.columns {
+                1 {
+                    name = LLL:EXT:theme/Resources/Private/Language/locallang_mod.xlf:gridelements.contentColumn.left
+                    colPos = 101
+                    colspan = 4
+                }
+                2 {
+                    name = LLL:EXT:theme/Resources/Private/Language/locallang_mod.xlf:gridelements.contentColumn.center
+                    colPos = 102
+                    colspan = 4
+                }
+                3 {
+                    name = LLL:EXT:theme/Resources/Private/Language/locallang_mod.xlf:gridelements.contentColumn.right
+                    colPos = 103
+                    colspan = 4
+                }
+            }
+        }
+        flexformDS = FILE:EXT:theme/Configuration/FlexForms/mobile_slider.xml
+    }
+
+    GridRow5050 < .GridRow333333
+    GridRow5050 {
+        title =  LLL:EXT:theme/Resources/Private/Language/locallang_mod.xlf:gridelements.gridRow5050.title
+        description = LLL:EXT:theme/Resources/Private/Language/locallang_mod.xlf:gridelements.gridRow5050.description
+        icon = EXT:theme/Resources/Public/Backend/Icons/Grid/50-50.png
+        frame = 2
+        topLevelLayout = 0
+        config {
+            colCount = 12
+            rowCount = 1
+            rows.1.columns {
+                1 {
+                    name = LLL:EXT:theme/Resources/Private/Language/locallang_mod.xlf:gridelements.contentColumn.left
+                    colPos = 101
+                    colspan = 6
+                }
+                2 {
+                    name = LLL:EXT:theme/Resources/Private/Language/locallang_mod.xlf:gridelements.contentColumn.right
+                    colPos = 102
+                    colspan = 6
+                }
+                3 >
+            }
+        }
+    }
+
+    GridRow3366 < .GridRow5050
+    GridRow3366 {
+        title =  LLL:EXT:theme/Resources/Private/Language/locallang_mod.xlf:gridelements.gridRow3366.title
+        description = LLL:EXT:theme/Resources/Private/Language/locallang_mod.xlf:gridelements.gridRow3366.description
+        icon = EXT:theme/Resources/Public/Backend/Icons/Grid/33-66.png
+    }
+
+    GridRow6633 < .GridRow5050
+    GridRow6633 {
+        title =  LLL:EXT:theme/Resources/Private/Language/locallang_mod.xlf:gridelements.gridRow6633.title
+        description = LLL:EXT:theme/Resources/Private/Language/locallang_mod.xlf:gridelements.gridRow6633.description
+        icon = EXT:theme/Resources/Public/Backend/Icons/Grid/66-33.png
+    }
+}

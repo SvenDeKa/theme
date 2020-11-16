@@ -1,0 +1,10 @@
+options {
+    pageTree {
+        showPageIdWithTitle = 1
+    }
+    file_list {
+        enableDisplayBigControlPanel = 1
+        enableDisplayThumbnails = 1
+        enableClipBoard = 1
+    }
+}

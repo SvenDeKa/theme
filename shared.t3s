@@ -1,0 +1,5 @@
+# Label/Flag for default language in backend
+mod.SHARED {
+    defaultLanguageFlag = de
+    defaultLanguageLabel = Deutsch
+}

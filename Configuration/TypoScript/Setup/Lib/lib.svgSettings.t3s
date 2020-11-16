@@ -1,0 +1,7 @@
+lib.svgSettings {
+    iconSpritePath = EXT:theme/Resources/Public/Images/Icons/Default/symbol/default-symbols.svg
+    #defaultIconDimensions {
+    #}
+}
+
+

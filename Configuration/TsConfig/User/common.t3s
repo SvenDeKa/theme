@@ -1,0 +1,10 @@
+#####################################################################
+#
+#   Backend Configuration for all users (included in group "common")
+#
+#   Added via ext_tables.php to default UserTSconfig
+#
+#####################################################################
+
+### module  configuration ###
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme/Configuration/TsConfig/User/Common" extensions="t3s">

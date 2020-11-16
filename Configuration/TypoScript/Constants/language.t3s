@@ -1,0 +1,30 @@
+language.default{
+    locale = de_DE
+    langKey = de-DE
+    iso2 = de
+    dateFormat = d.m.Y
+    dateFormat2 = %d.%m.%Y
+    timeFormat = H:i
+    timeFormat2 = %H:%i
+}
+
+language {
+    default {
+        locale = de_DE
+        langKey = de-DE
+        iso2 = de
+        dateFormat = d.m.Y
+        dateFormat2 = %d.%m.%Y
+        timeFormat = H:i
+        timeFormat2 = %H:%i
+    }
+    1 {
+        locale = en_EN
+        langKey = en-EN
+        iso2 = en
+        #        dateFormat = d.m.Y
+        #        dateFormat2 = %d.%m.%Y
+        #        timeFormat = H:i
+        #        timeFormat2 = %H:%i
+    }
+}

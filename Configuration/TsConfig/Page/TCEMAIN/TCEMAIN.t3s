@@ -1,0 +1,12 @@
+TCEMAIN {
+    permissions{
+        groupid = 1
+        # User can do anything (default):
+        user = 31
+        # Group can do anything
+        group = 31
+        # Everybody can at least see the pagecon
+        everybody = show
+    }
+    clearCacheCmd =
+}

@@ -1,0 +1,25 @@
+.navbar-main {
+  background-color: $brand-blue;
+  top: 0px;
+
+  .navbar-brand {
+    padding: 0;
+    @extend .navbar-brand;
+
+    &__logo {
+      height: auto;
+      max-width: 40px;
+    }
+
+    &__word {
+      color: $brand-green;
+      font-size: 2em;
+      top: 0.2em;
+      display: inline-block;
+      position: relative;
+      left: 20px;
+      letter-spacing: 0.03em;
+      font-weight: 200;
+    }
+  }
+}

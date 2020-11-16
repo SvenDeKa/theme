@@ -1,0 +1,30 @@
+{
+    "name": "team23/t23-theme",
+    "description": "A starting point for TYPO3 projects",
+    "homepage": "https://team23.de",
+    "license": ["GPL-2.0+"],
+    "type": "typo3-cms-extension",
+    "version": "1.0.0",
+    "keywords": [
+        "TYPO3 CMS theming"
+     ],
+    "require": {
+        "typo3/cms-core": "^9.5.5",
+        "typo3-ter/vhs": "^5.0.0"
+    },
+    "replace": {
+        "t23-theme": "self.version",
+        "typo3-ter/t23-theme": "self.version"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "theme"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Svendeka\\Theme\\": "Classes/"
+        }
+    }
+
+}

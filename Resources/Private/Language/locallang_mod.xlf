@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2019-04-20T20:20:00Z">
+        <header>
+            <generator>LFEditor</generator>
+        </header>
+        <body>
+            <trans-unit id="gridelements.gridRow333333.title">
+                <source>33/33/33</source>
+            </trans-unit>
+            <trans-unit id="gridelements.gridRow333333.description">
+                <source>equaly distributed three columns</source>
+            </trans-unit>
+            <trans-unit id="gridelements.gridRow5050.title">
+                <source>50/50</source>
+            </trans-unit>
+            <trans-unit id="gridelements.gridRow5050.description">
+                <source>fifty fifthy...</source>
+            </trans-unit>
+            <trans-unit id="gridelements.gridRow3366.title">
+                <source>33/66</source>
+            </trans-unit>
+            <trans-unit id="gridelements.gridRow3366.description">
+                <source>narrow on the left, wide on the right</source>
+            </trans-unit>
+            <trans-unit id="gridelements.gridRow6633.title">
+                <source>66/33</source>
+            </trans-unit>
+            <trans-unit id="gridelements.gridRow6633.description">
+                <source>wide on the left, narrow on the right</source>
+            </trans-unit>
+            <trans-unit id="gridelements.contentColumn.left">
+                <source>left</source>
+            </trans-unit>
+            <trans-unit id="gridelements.contentColumn.center">
+                <source>center</source>
+            </trans-unit>
+            <trans-unit id="gridelements.contentColumn.right">
+                <source>right</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

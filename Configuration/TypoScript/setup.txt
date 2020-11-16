@@ -1,0 +1,25 @@
+#########################
+#   ROOT-Setup for PID =1
+#########################
+
+#   Config (global TS configuration)
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme/Configuration/TypoScript/Setup/Config" extensions="t3s">
+
+#   Lib (cached)
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme/Configuration/TypoScript/Setup/Lib/lib.mainmenu.t3s">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme/Configuration/TypoScript/Setup/Lib/lib.svgSettings.t3s">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme/Configuration/TypoScript/Setup/Lib/lib.contentElement.t3s">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme/Configuration/TypoScript/Setup/Lib/lib.dynamicContent.t3s">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme/Configuration/TypoScript/Setup/Lib/lib.gridelements.t3s">
+
+#   Temp (non-cached)
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme/Configuration/TypoScript/Setup/Temp" extensions="t3s">
+
+#   Plugin-TS
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme/Configuration/TypoScript/Setup/Plugin" extensions="t3s">
+
+#   Module-TS
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme/Configuration/TypoScript/Setup/Module" extensions="t3s">
+
+#   TS for Pages
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme/Configuration/TypoScript/Setup/Page/page.t3s">

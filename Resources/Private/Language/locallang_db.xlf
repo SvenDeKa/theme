@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2019-04-20T20:20:00Z">
+        <header>
+            <generator>LFEditor</generator>
+        </header>
+        <body>
+            <trans-unit id="theme.tt_content.background_color">
+                <source>Background-color</source>
+            </trans-unit>
+            <trans-unit id="theme.tt_content.background_color.0">
+                <source>transparent</source>
+            </trans-unit>
+            <trans-unit id="theme.tt_content.background_color.1">
+                <source>gray</source>
+            </trans-unit>
+            <trans-unit id="theme.tt_content.background_color.2">
+                <source>dark gray</source>
+            </trans-unit>
+            <trans-unit id="theme.tt_content.background_color.3">
+                <source>brand blue</source>
+            </trans-unit>
+            <trans-unit id="theme.tt_content.background_color.4">
+                <source>brand green</source>
+            </trans-unit>
+
+
+            <trans-unit id="theme.tt_content.content_max_width">
+                <source>Content Width</source>
+            </trans-unit>
+            <trans-unit id="theme.tt_content.content_max_width.0">
+                <source>default</source>
+            </trans-unit>
+            <trans-unit id="theme.tt_content.content_max_width.1">
+                <source>narrow</source>
+            </trans-unit>
+            <trans-unit id="theme.tt_content.content_max_width.100">
+                <source>full</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,11 @@
+############################################################
+#
+#   Include all page-Object configurations
+#
+#   Folderstructure
+#   ~~~~~~~~~~~~~~
+#   naming inside the Folder TSperTypeNum:
+#   <nameOfPageObject>-<typeNum>.t3s
+#
+############################################################
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme/Configuration/TypoScript/Setup/Page/PageObjects" extensions="t3s">

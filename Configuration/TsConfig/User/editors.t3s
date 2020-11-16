@@ -1,0 +1,8 @@
+#####################################################################
+#
+#   Backend Configuration for editors (included in group "editors")
+#
+#####################################################################
+
+### module  configuration ###
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme/Configuration/TsConfig/User/Editors" extensions="t3s">

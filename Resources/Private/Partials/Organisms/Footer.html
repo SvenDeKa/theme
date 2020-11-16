@@ -1,0 +1,51 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+     data-namespace-typo3-fluid="true">
+
+    <footer class="footer" data-background-color="black">
+        <div class="container">
+            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '2'}" />
+            <div class="row">
+                <div class="col-1">
+                    <img src="{f:uri.image(src: 'EXT:theme/Resources/Public/Images/logo_tretlader_quad_image_cropped_white.svg')}" alt="Tretlader - Lastenrad Fuhrpark Beratung Vertrieb" class="navbar-brand__logo"/>
+                </div>
+                <div class="col-3">
+                    <p class="text-left small">
+                        Tretlader<br>
+                        Sven Külpmann<br>
+                        Pranthochstraße 2<br>
+                        86150 Augsburg
+                    </p>
+                </div>
+                <div class="col-6">
+                    <p class="text-left small">
+                        mail: <f:link.email email="hello@tretlader.com">hello@tretlader.com</f:link.email><br>
+                        tel: 0152 061 920 83
+                        <f:link.typolink parameter="4"/>
+                    </p>
+                </div>
+                <div class="col-2">
+                    <ul class="social-buttons pull-right">
+                        <li>
+                            <a href="https://www.facebook.com/tretlader"
+                               target="_blank"
+                               class="btn btn-icon btn-neutral btn-link"
+                               title="Tretlader bei Facebook">
+                                <i class="fab fa-facebook-square"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/tretlader/"
+                               target="_blank"
+                               class="btn btn-icon btn-neutral btn-link"
+                               title="Tretlader bei Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+</div>

@@ -1,0 +1,19 @@
+config {
+    language = {$language.default.iso2}
+    locale_all = {$language.default.locale}.utf8
+    htmlTag_langKey = {$language.default.langKey}
+    sys_language_uid = 0
+    uniqueLinkVars = 1
+    linkVars = L(0-1)
+    sys_language_mode = strict
+    sys_language_overlay = hideNonTranslated
+}
+
+[globalVar = GP:L = 1]
+    config {
+        language = {$language.1.iso2}
+        locale_all = {$language.1.locale}.utf8
+        htmlTag_langKey = {$language.1.iso2}
+        sys_language_uid = 1
+    }
+[global]

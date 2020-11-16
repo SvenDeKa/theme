@@ -1,0 +1,15 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+     data-namespace-typo3-fluid="true">
+    <a class="unsplash-logo{f:if(condition:position,then:' unsplash-logo--{position}',else:' unsplash-logo--bottom-right')}{f:if(condition:color,then:' unsplash-logo--{color}')}"
+       href="{source}?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
+       target="_blank"
+       rel="noopener noreferrer"
+       title="Picture provided by {creator} on {publisher}. Thanks!">
+        <span class="unsplash-logo__svg">
+            <svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg>
+        </span>
+        <span class="unsplash-logo__creator">{creator}</span>
+    </a>
+</div>
