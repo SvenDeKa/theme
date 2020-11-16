@@ -1,5 +1,5 @@
 {
-    "name": "team23/t23-theme",
+    "name": "svendeka/theme",
     "description": "A starting point for TYPO3 projects",
     "homepage": "https://team23.de",
     "license": ["GPL-2.0+"],
@@ -9,12 +9,11 @@
         "TYPO3 CMS theming"
      ],
     "require": {
-        "typo3/minimal": "^10.4",
-        "typo3-ter/vhs": "^5.0.0"
+        "typo3/minimal": "^10.4"
     },
     "replace": {
-        "t23-theme": "self.version",
-        "typo3-ter/t23-theme": "self.version"
+        "svendeka-theme": "self.version",
+        "typo3-ter/svendeka-theme": "self.version"
     },
     "extra": {
         "typo3/cms": {
